@@ -1,0 +1,13 @@
+{
+    "font_size": 16,
+    "update_check": false,
+    "open_files_in_new_window": false,
+    "detect_indentation": true,
+    "draw_white_space": "all",
+    "tab_size": 4,
+    "translate_tabs_to_spaces": true,
+    "trim_trailing_white_space_on_save": true,
+    "format_on_save": true,
+    "ensure_newline_at_eof_on_save": true,
+    "trim_automatic_white_space": false,
+}
