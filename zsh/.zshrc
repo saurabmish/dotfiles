@@ -18,8 +18,7 @@ export PYTHONSTARTUP=~/.config/pythonrc
 # ZSH
 export CLICOLOR=1
 export TERM=xterm-256color
-export PS1='%(?.%F{green}.%F{green})%n@%m %1~ %# %f'
-
+export PS1="%{%F{green}%}%n%{%f%}%{%F{white}%}@%{%f%}%{%F{green}%}%m %{%F{blue}%}%1~ %{%f%}%% "
 
 # Aliases
 alias ll='ls -la'
