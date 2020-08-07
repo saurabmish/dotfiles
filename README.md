@@ -1,2 +1,3 @@
 # dotfiles
-Configuration files with `XDG` complaint `~/.config/`
+
+Configuration files with `XDG` complaint user home directory.
