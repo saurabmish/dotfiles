@@ -1,4 +1,5 @@
 **cache/
-vim/viminfo
-zsh/.zsh_history
-
+*viminfo
+*zsh_history
+wireshark/recent
+wireshark/recent_common
