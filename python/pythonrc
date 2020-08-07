@@ -1,0 +1,5 @@
+# suppresses writing the history file instead of disabling history entirely
+
+import readline
+readline.write_history_file = lambda *args: None
+
