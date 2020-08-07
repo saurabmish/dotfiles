@@ -15,13 +15,16 @@ export AWS_SHARED_CREDENTIALS_FILE=~/.config/aws/credentials
 export PYTHONSTARTUP=~/.config/pythonrc
 
 
+# Jupyter
+export JUPYTER_CONFIG_DIR=~/.config/jupyter
+
 # ZSH
 export CLICOLOR=1
 export TERM=xterm-256color
 export PS1="%{%F{green}%}%n%{%f%}%{%F{white}%}@%{%f%}%{%F{green}%}%m %{%F{blue}%}%1~ %{%f%}%% "
 
+
 # Aliases
 alias ll='ls -la'
 alias youtube-dl='noglob youtube-dl'
 alias emacs='emacs -q --load ~/.config/emacs.d/init.el'
-
