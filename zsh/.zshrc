@@ -5,18 +5,34 @@ export AWS_SHARED_CREDENTIALS_FILE=~/.config/aws/credentials
 
 
 # Docker
+export DOCKER_CONFIG=~/.config/docker
 
 
-# Git
-# XDG complaint if ~/.config/git/config present
+# Git is XDG complaint if ~/.config/git/config present
 
 
 # Python
-export PYTHONSTARTUP=~/.config/pythonrc
+export PYTHONSTARTUP=~/.config/python/pythonrc
+export PYTHON_EGG_CACHE=~/.config/python/python-eggs
+export PYLINTHOME=~/.config/python/pylint
 
 
-# Jupyter
+# IPython/Jupyter
+export IPYTHONDIR=~/.config/ipython
 export JUPYTER_CONFIG_DIR=~/.config/jupyter
+
+
+# Rust
+export RUSTUP_HOME=~/.config/rust/rustup
+export CARGO_HOME=~/.config/rust/cargo
+
+
+# Postgres
+export PSQLRC="~/.config/pg/psqlrc"
+export PSQL_HISTORY="~/.cache/pg/psql_history"
+export PGPASSFILE="~/.config/pg/pgpass"
+export PGSERVICEFILE="~/.config/pg/pg_service.conf"
+
 
 # ZSH
 export CLICOLOR=1
