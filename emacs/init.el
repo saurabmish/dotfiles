@@ -1,13 +1,8 @@
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;      XDG Compliance      ;;;;;;;;;;;;;;;;;
-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-
-
-
-
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;;;;;;;;;;;; Backup, Auto-save, and Session Management ;;;;;;;;;;;;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+; Baseline
 
 (let ((backup-dir "~/.config/emacs/tmp/backups")
       (auto-saves-dir "~/.config/emacs/tmp/auto-saves/")
@@ -28,11 +23,11 @@
 ; Backup
 
 (setq
-  backup-by-copying   t    ; don't delink hardlinks
-  delete-old-versions t    ; clean up the backups
-  version-control     t    ; use version numbers on backups
-  kept-new-versions   7    ; keep some new versions
-  kept-old-versions   4    ; and some old ones, too
+  backup-by-copying   t                                 ; don't delink hardlinks
+  delete-old-versions t                                 ; clean up the backups
+  version-control     t                                 ; use version numbers on backups
+  kept-new-versions   7                                 ; keep some new versions
+  kept-old-versions   4                                 ; and some old ones, too
 )
 
 ; Session
@@ -44,7 +39,6 @@
   desktop-path                (list desktop-dirname)              ; used to load desktop file if desktop-dirname is not default
   desktop-save                t                                   ; save desktop session while exiting
   desktop-files-not-to-save   "^$"                                ; reload tramp paths
-  desktop-load-locked-desktop nil
   desktop-auto-save-timeout   30                                  ; auto-save desktop file every 30 seconds
 )
 
@@ -58,13 +52,13 @@
 
 (when window-system
   (setq default-frame-alist
-    `((top . 80) (left . 300) (width . 85) (height . 45)))
-  (set-face-attribute 'default nil :font "Menlo" :height 160)    ; font
-  (tool-bar-mode -1)                                             ; don't show icons for "File, Edit, ..."
-  (scroll-bar-mode -1)                                           ; don't show scroll bar
-  (menu-bar-mode -1)                                             ; don't show "File, Edit, ..."
-  (tooltip-mode -1)                                              ; don't show information at mouse pointer
-  (fringe-mode '(0 . 0))                                         ; no borders on either side of frame
+    `((top . 80) (left . 300) (width . 85) (height . 45)))        ; window size and position
+  (set-face-attribute 'default nil :font "Menlo" :height 160)     ; Menlo font of size 16
+  (tool-bar-mode -1)                                              ; don't show icons for "File, Edit, ..."
+  (scroll-bar-mode -1)                                            ; don't show scroll bar
+  (menu-bar-mode -1)                                              ; don't show "File, Edit, ..."
+  (tooltip-mode -1)                                               ; don't show information at mouse pointer
+  (fringe-mode '(0 . 0))                                          ; no borders on either side of frame
 )
 
 ; Offset successive frames
@@ -94,29 +88,29 @@
 
 ; Global
 
-(global-display-line-numbers-mode t)    ;
-(set-default-coding-systems 'utf-8)     ;
-(defalias 'yes-or-no-p 'y-or-n-p)       ;
-(global-auto-revert-mode t)             ; refresh current buffer if file changes through a different source
-(desktop-save-mode t)                   ; save and restore files from previous session
-(recentf-mode t)                        ; keep track of recent files
+(global-display-line-numbers-mode t)                    ; show line numbers in all buffers
+(set-default-coding-systems 'utf-8)                     ; UTF-8 file encoding
+(defalias 'yes-or-no-p 'y-or-n-p)                       ; ask fr confirmation with 'y' / 'n' insead of 'yes' / 'no'
+(global-auto-revert-mode t)                             ; refresh current buffer if file changes through a different source
+(desktop-save-mode t)                                   ; save and restore files from previous session
+(recentf-mode t)                                        ; keep track of recent files
 
 ; Better defaults
 
 (setq-default
   inhibit-startup-screen    t
-  initial-scratch-message   ""                   ; no message on scratch buffer
-  initial-major-mode        (quote text-mode)    ; start in text mode
-  show-paren-mode           t                    ; highlight matching parenthesis
-  column-number-mode        t                    ; show column at cursor position
-  delete-selection-mode     t
-  delete-trailing-lines     t
-  select-enable-clipboard   t
-  sentence-end-double-space nil
-  confirm-kill-emacs        (quote y-or-n-p)
-  help-window-select        t
-  word-wrap                 t
-  ring-bell-function        (quote ignore)
+  initial-scratch-message   ""                          ; no message on scratch buffer
+  initial-major-mode        (quote text-mode)           ; start in text mode
+  show-paren-mode           t                           ; highlight matching parenthesis
+  column-number-mode        t                           ; show column at cursor position
+  delete-selection-mode     t                           ; highlighted characters will be replaced on keypress
+  delete-trailing-lines     t                           ; delete all trailing whitespace
+  select-enable-clipboard   t                           ; enable system clipboard
+  sentence-end-double-space nil                         ; sentences end with single space after period
+  confirm-kill-emacs        (quote y-or-n-p)            ; always confirm on exit
+  help-window-select        t                           ; help window will become active if opened
+  word-wrap                 t                           ; wrap words to next line if they dont fit in the window
+  ring-bell-function        (quote ignore)              ; disable audio bell
 )
 
 ; Tab
