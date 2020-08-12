@@ -52,7 +52,7 @@
 
 (when window-system
   (setq default-frame-alist
-    `((top . 80) (left . 300) (width . 85) (height . 45)))        ; window size and position
+    '((top . 80) (left . 300) (width . 85) (height . 45)))        ; window size and position
   (set-face-attribute 'default nil :font "Menlo" :height 160)     ; Menlo font of size 16
   (tool-bar-mode -1)                                              ; don't show icons for "File, Edit, ..."
   (scroll-bar-mode -1)                                            ; don't show scroll bar
@@ -89,6 +89,7 @@
 ; Global
 
 (global-display-line-numbers-mode t)                    ; show line numbers in all buffers
+(global-whitespace-mode 1)                              ; show all whitespaces
 (set-default-coding-systems 'utf-8)                     ; UTF-8 file encoding
 (defalias 'yes-or-no-p 'y-or-n-p)                       ; ask fr confirmation with 'y' / 'n' insead of 'yes' / 'no'
 (global-auto-revert-mode t)                             ; refresh current buffer if file changes through a different source
@@ -107,20 +108,16 @@
   delete-trailing-lines     t                           ; delete all trailing whitespace
   select-enable-clipboard   t                           ; enable system clipboard
   sentence-end-double-space nil                         ; sentences end with single space after period
+  tab-width                 4                           ; TAB is 4 characters
   confirm-kill-emacs        (quote y-or-n-p)            ; always confirm on exit
   help-window-select        t                           ; help window will become active if opened
   word-wrap                 t                           ; wrap words to next line if they dont fit in the window
   ring-bell-function        (quote ignore)              ; disable audio bell
 )
 
-; Tab
+; Tabs and whitespace
 
-(setq-default
-  indent-tabs-mode t
-  tab-stop-list (number-sequence 4 200 4)
-  tab-width 4
-  indent-line-function 'insert-tab
-)
+(setq whitespace-style '(space-mark tab-mark))          ; show ONLY tabs and spaces (no newline character)
 
 (defun untabify-except-makefiles ()
   "Replace tabs with spaces except in makefiles."
@@ -129,7 +126,7 @@
   )
 )
 
-(add-hook 'before-save-hook 'untabify-except-makefiles)
+(add-hook 'before-save-hook 'untabify-except-makefiles) ; convert all tabs to spaces on save (using the above function)
 
 
 
@@ -142,7 +139,8 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- )
+ '(custom-enabled-themes '(wombat))
+ '(custom-theme-directory "~/.config/emacs/themes"))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
