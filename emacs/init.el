@@ -89,7 +89,6 @@
 ; Global
 
 (global-display-line-numbers-mode t)                    ; show line numbers in all buffers
-(global-whitespace-mode 1)                              ; show all whitespaces
 (set-default-coding-systems 'utf-8)                     ; UTF-8 file encoding
 (defalias 'yes-or-no-p 'y-or-n-p)                       ; ask fr confirmation with 'y' / 'n' insead of 'yes' / 'no'
 (global-auto-revert-mode t)                             ; refresh current buffer if file changes through a different source
@@ -117,7 +116,7 @@
 
 ; Tabs and whitespace
 
-(setq whitespace-style '(space-mark tab-mark))          ; show ONLY tabs and spaces (no newline character)
+
 
 (defun untabify-except-makefiles ()
   "Replace tabs with spaces except in makefiles."
