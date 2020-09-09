@@ -1,7 +1,10 @@
 **cache/
-vim/viminfo
-zsh/zsh_history
-wireshark/recent
-wireshark/recent_common
 emacs/tmp/*
 emacs/recentf
+ssh/id_rsa
+ssh/id_rsa.pub
+ssh/known_hosts
+vim/viminfo
+wireshark/recent
+wireshark/recent_common
+zsh/zsh_history
