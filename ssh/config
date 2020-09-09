@@ -1,4 +1,0 @@
-Host *
-  AddKeysToAgent yes
-  UseKeychain yes
-  IdentityFile ~/.config/ssh/id_rsa
