@@ -1,0 +1,7 @@
+**cache/
+*viminfo
+*zsh_history
+wireshark/recent
+wireshark/recent_common
+emacs/tmp/*
+emacs/recentf
