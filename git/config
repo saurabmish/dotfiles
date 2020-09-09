@@ -1,0 +1,10 @@
+[user]
+	name = Saurabh Mishra
+	email = saurab.mish@gmail.com
+[core]
+	autocrlf = input
+	editor = mvim
+	sshCommand = ssh -i /Users/saurabh/.config/ssh/id_rsa -F /dev/null
+[credential]
+	helper = osxkeychain
+
