@@ -1,6 +1,6 @@
 **cache/
-*viminfo
-*zsh_history
+vim/viminfo
+zsh/zsh_history
 wireshark/recent
 wireshark/recent_common
 emacs/tmp/*
