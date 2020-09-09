@@ -1,4 +1,5 @@
 **cache/
+.DS_Store
 emacs/tmp/*
 emacs/recentf
 ssh/id_rsa
