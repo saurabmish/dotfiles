@@ -4,9 +4,9 @@
 
 ; Baseline
 
-(let ((backup-dir "~/.config/emacs/tmp/backups")
-      (auto-saves-dir "~/.config/emacs/tmp/auto-saves/")
-      (desktop-dir "~/.config/emacs/tmp/desktop/"))
+(let ((backup-dir "~/.cache/emacs/backups/")
+      (auto-saves-dir "~/.cache/emacs/auto-saves/")
+      (desktop-dir "~/.cache/emacs/desktop/"))
   (dolist (dir (list backup-dir auto-saves-dir desktop-dir))
     (when (not (file-directory-p dir))
       (make-directory dir t)
@@ -33,7 +33,7 @@
 ; Session
 
 (setq
-  desktop-dirname             "~/.config/emacs/tmp/desktop/"      ; location of desktop files
+  desktop-dirname             "~/.cache/emacs/desktop/"      ; location of desktop files
   desktop-base-file-name      "emacs.desktop"                     ; name of desktop file (hidden by default)
   desktop-base-lock-name      "emacs-desktop.lock"                ; name of lock file when desktop file is being used
   desktop-path                (list desktop-dirname)              ; used to load desktop file if desktop-dirname is not default
