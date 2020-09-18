@@ -49,6 +49,7 @@ export PS1="%{%F{green}%}%n%{%f%}%{%F{white}%}@%{%f%}%{%F{green}%}%m %{%F{red}%}
 export SQLITE_HISTORY=$HOME/.cache/sqlite/history
 export ECLIPSE_HOME=$HOME/.config/eclipse
 
+
 # Aliases
 alias ll='ls -la'
 alias youtube-dl='noglob youtube-dl'
