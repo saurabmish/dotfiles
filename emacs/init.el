@@ -6,8 +6,9 @@
 
 (let ((backup-dir "~/.cache/emacs/backups/")
       (auto-saves-dir "~/.cache/emacs/auto-saves/")
-      (desktop-dir "~/.cache/emacs/desktop/"))
-  (dolist (dir (list backup-dir auto-saves-dir desktop-dir))
+      (desktop-dir "~/.cache/emacs/desktop/")
+      (recent-files-dir "~/.cache/emacs/recent/"))
+  (dolist (dir (list backup-dir auto-saves-dir desktop-dir recent-files-dir))
     (when (not (file-directory-p dir))
       (make-directory dir t)
     )
@@ -17,6 +18,7 @@
         auto-save-list-file-prefix (concat auto-saves-dir ".saves-")
         tramp-backup-directory-alist `((".*" . ,backup-dir))
         tramp-auto-save-directory auto-saves-dir
+        recentf-save-file (expand-file-name "recentf" recent-files-dir)
   )
 )
 
@@ -33,7 +35,7 @@
 ; Session
 
 (setq
-  desktop-dirname             "~/.cache/emacs/desktop/"      ; location of desktop files
+  desktop-dirname             "~/.cache/emacs/desktop/"           ; location of desktop files
   desktop-base-file-name      "emacs.desktop"                     ; name of desktop file (hidden by default)
   desktop-base-lock-name      "emacs-desktop.lock"                ; name of lock file when desktop file is being used
   desktop-path                (list desktop-dirname)              ; used to load desktop file if desktop-dirname is not default
@@ -59,6 +61,7 @@
   (menu-bar-mode -1)                                              ; don't show "File, Edit, ..."
   (tooltip-mode -1)                                               ; don't show information at mouse pointer
   (fringe-mode '(0 . 0))                                          ; no borders on either side of frame
+  (add-to-list 'default-frame-alist '(ns-appearance . dark))      ; makes titlebar font visible in dark background
 )
 
 ; Offset successive frames
