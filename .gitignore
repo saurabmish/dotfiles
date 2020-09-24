@@ -2,6 +2,7 @@
 .DS_Store
 emacs/tmp/*
 emacs/recentf
+go/
 ssh/id_rsa
 ssh/id_rsa.pub
 ssh/known_hosts
