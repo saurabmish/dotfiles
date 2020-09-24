@@ -19,6 +19,11 @@ export IPYTHONDIR=$HOME/.config/ipython
 export JUPYTER_CONFIG_DIR=$HOME/.config/jupyter
 
 
+# Golang
+export GOPATH=$HOME/.config/go
+export GO111MODULE=on
+
+
 # Rust
 export RUSTUP_HOME=$HOME/.config/rust/rustup
 export CARGO_HOME=$HOME/.config/rust/cargo
@@ -43,6 +48,7 @@ export PGSERVICEFILE=$HOME/.config/postgres/pg_service.conf
 export CLICOLOR=1
 export TERM=xterm-256color
 export PS1="%{%F{green}%}%n%{%f%}%{%F{white}%}@%{%f%}%{%F{green}%}%m %{%F{red}%}%1~ %{%f%}%% "
+export HISTFILE=$HOME/.cache/zsh/zsh_history
 
 
 # Miscellaneoud
@@ -54,3 +60,4 @@ export ECLIPSE_HOME=$HOME/.config/eclipse
 alias ll='ls -la'
 alias youtube-dl='noglob youtube-dl'
 alias git='noglob git'
+alias py3='python3'
