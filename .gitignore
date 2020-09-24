@@ -1,7 +1,6 @@
 **cache/
 .DS_Store
-emacs/tmp/*
-emacs/recentf
+emacs/elpa
 go/
 ssh/id_rsa
 ssh/id_rsa.pub
