@@ -118,6 +118,7 @@
   select-enable-clipboard   t                           ; enable system clipboard
   sentence-end-double-space nil                         ; sentences end with single space after period
   tab-width                 4                           ; TAB is 4 characters
+  tab-stop-list             (number-sequence 4 200 4)   ; Every TAB is 4 spaces
   confirm-kill-emacs        (quote y-or-n-p)            ; always confirm on exit
   help-window-select        t                           ; help window will become active if opened
   word-wrap                 t                           ; wrap words to next line if they dont fit in the window
@@ -126,8 +127,6 @@
 
 ; Tabs and whitespace
 
-
-
 (defun untabify-except-makefiles ()
   "Replace tabs with spaces except in makefiles."
   (unless (derived-mode-p 'makefile-mode)
@@ -135,7 +134,7 @@
   )
 )
 
-(add-hook 'before-save-hook 'untabify-except-makefiles) ; convert all tabs to spaces on save (using the above function)
+(add-hook 'before-save-hook 'untabify-except-makefiles) ; convert all tabs to spaces on save
 
 
 
@@ -149,8 +148,7 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(custom-enabled-themes '(wombat))
- '(custom-theme-directory "~/.config/emacs/themes")
- '(package-selected-packages '(go-mode)))
+ '(custom-theme-directory "~/.config/emacs/themes"))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
