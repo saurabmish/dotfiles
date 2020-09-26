@@ -118,7 +118,8 @@
   select-enable-clipboard   t                           ; enable system clipboard
   sentence-end-double-space nil                         ; sentences end with single space after period
   tab-width                 4                           ; TAB is 4 characters
-  tab-stop-list             (number-sequence 4 200 4)   ; Every TAB is 4 spaces
+  tab-stop-list             (number-sequence 4 200 4)   ; every TAB is 4 spaces
+  indent-tabs-mode          nil                         ; indentation will always be done using spaces
   confirm-kill-emacs        (quote y-or-n-p)            ; always confirm on exit
   help-window-select        t                           ; help window will become active if opened
   word-wrap                 t                           ; wrap words to next line if they dont fit in the window
@@ -143,15 +144,15 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(custom-enabled-themes '(wombat))
- '(custom-theme-directory "~/.config/emacs/themes"))
+  ;; custom-set-variables was added by Custom.
+  ;; If you edit it by hand, you could mess it up, so be careful.
+  ;; Your init file should contain only one such instance.
+  ;; If there is more than one, they won't work right.
+  '(custom-enabled-themes '(wombat))
+  '(custom-theme-directory "~/.config/emacs/themes"))
 (custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
+  ;; custom-set-faces was added by Custom.
+  ;; If you edit it by hand, you could mess it up, so be careful.
+  ;; Your init file should contain only one such instance.
+  ;; If there is more than one, they won't work right.
  )
