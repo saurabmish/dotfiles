@@ -27,6 +27,7 @@ export GO111MODULE=on
 # Rust
 export RUSTUP_HOME=$HOME/.config/rust/rustup
 export CARGO_HOME=$HOME/.config/rust/cargo
+export PATH=$HOME/.config/rust/cargo/bin:$PATH
 
 
 # Ruby
@@ -51,7 +52,7 @@ export PS1="%{%F{green}%}%n%{%f%}%{%F{white}%}@%{%f%}%{%F{green}%}%m %{%F{red}%}
 export HISTFILE=$HOME/.cache/zsh/zsh_history
 
 
-# Miscellaneoud
+# Miscellaneous
 export SQLITE_HISTORY=$HOME/.cache/sqlite/history
 export ECLIPSE_HOME=$HOME/.config/eclipse
 
