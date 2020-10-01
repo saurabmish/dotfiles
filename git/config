@@ -5,3 +5,4 @@
     autocrlf = input
     editor = subl
     sshCommand = ssh -i /Users/saurabh/.config/ssh/id_rsa -F /dev/null
+    excludesfile = /Users/saurabh/.config/git/global_ignore
