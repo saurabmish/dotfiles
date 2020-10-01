@@ -1,7 +1,7 @@
 [user]
-	name = Saurabh Mishra
-	email = saurab.mish@gmail.com
+    name = Saurabh Mishra
+    email = saurab.mish@gmail.com
 [core]
-	autocrlf = input
-	editor = mvim
-	sshCommand = ssh -i /Users/saurabh/.config/ssh/id_rsa -F /dev/null
+    autocrlf = input
+    editor = subl
+    sshCommand = ssh -i /Users/saurabh/.config/ssh/id_rsa -F /dev/null
