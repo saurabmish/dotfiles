@@ -54,7 +54,7 @@ export ECLIPSE_HOME=$XDG_CONFIG_HOME/eclipse
 
 
 # Aliases
-alias ll='ls -la'
+alias ll='ls -lha'
 alias youtube-dl='noglob youtube-dl'
 alias git='noglob git'
 alias py3='python3'
