@@ -30,6 +30,14 @@ export CARGO_HOME=$XDG_CONFIG_HOME/rust/cargo
 export PATH=$XDG_CONFIG_HOME/rust/cargo/bin:$PATH
 
 
+# Ruby
+export PATH="/usr/local/opt/ruby/bin:$PATH"
+export LDFLAGS="-L/usr/local/opt/ruby/lib"
+export CPPFLAGS="-I/usr/local/opt/ruby/include"
+export GEM_HOME=$XDG_CONFIG_HOME/gem
+export GEM_PATH=$XDG_CONFIG_HOME/gem
+
+
 # Postgres
 export PSQLRC=$XDG_CONFIG_HOME/postgres/psqlrc
 export PSQL_HISTORY=$XDG_CACHE_HOME/postgres/psql_history
@@ -47,6 +55,12 @@ export HISTFILE=$XDG_CACHE_HOME/zsh/zsh_history
 ## SSH
 export SSH_CONFIG=$XDG_CONFIG_HOME/ssh/config
 export SSH_PRIVATE_KEY=$XDG_CONFIG_HOME/ssh/id_rsa
+
+
+# Vim
+export VIMINIT='let $MYVIMRC="$XDG_CONFIG_HOME/vim/vimrc" | source $MYVIMRC'
+export VIMDOTDIR="$XDG_CONFIG_HOME/vim"
+
 
 # Miscellaneous
 export SQLITE_HISTORY=$XDG_CACHE_HOME/sqlite/history
