@@ -24,6 +24,11 @@ export GOPATH=$XDG_CONFIG_HOME/go
 export GO111MODULE=on
 
 
+# Java
+export PATH="/usr/local/opt/openjdk/bin:$PATH"
+export CPPFLAGS="-I/usr/local/opt/openjdk/include"
+
+
 # Rust
 export RUSTUP_HOME=$XDG_CONFIG_HOME/rust/rustup
 export CARGO_HOME=$XDG_CONFIG_HOME/rust/cargo
