@@ -35,10 +35,10 @@ endif
 
 " VIM files
 " (// creates files using complete file path; preventing name collisions)
-set viminfo+=n$XDG_CACHE_HOME/vim/viminfo     " info file
-set backupdir=$XDG_CACHE_HOME/vim/backup//    " backup files
-set directory=$XDG_CACHE_HOME/vim/swap//      " swap files
-set undodir=$XDG_CACHE_HOME/vim/undo//        " undo files
+set viminfo+=n$HOME/.cache/vim/viminfo     " info file
+set backupdir=$HOME/.cache/vim/backup//    " backup files
+set directory=$HOME/.cache/vim/swap//      " swap files
+set undodir=$HOME/.cache/vim/undo//        " undo files
 
 
 " GUI specific
