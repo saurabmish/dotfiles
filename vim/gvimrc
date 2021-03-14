@@ -26,19 +26,19 @@ set hlsearch                         " highlight matches
 
 
 " VIM directories
-if !isdirectory($HOME . "/.config/vim/tmp")
-    call mkdir($HOME . "/.config/vim/tmp/backup", "p", 0700)
-    call mkdir($HOME . "/.config/vim/tmp/swap", "p", 0700)
-    call mkdir($HOME . "/.config/vim/tmp/undo", "p", 0700)
+if !isdirectory($HOME . "/.cache/vim")
+    call mkdir($HOME . "/.cache/vim/backup", "p", 0700)
+    call mkdir($HOME . "/.cache/vim/swap", "p", 0700)
+    call mkdir($HOME . "/.cache/vim/undo", "p", 0700)
 endif
 
 
 " VIM files
-set viminfo+=n~/.config/vim/viminfo         " VIM info files
-set backupdir=~/.config/vim//tmp/backup//   " backup files
-set directory=~/.config/vim/tmp/swap//      " swap files
-set undodir=~/.config/vim/tmp/undo//        " undo files
 " (// creates files using complete file path; preventing name collisions)
+set viminfo+=n$XDG_CACHE_HOME/vim/viminfo     " info file
+set backupdir=$XDG_CACHE_HOME/vim/backup//    " backup files
+set directory=$XDG_CACHE_HOME/vim/swap//      " swap files
+set undodir=$XDG_CACHE_HOME/vim/undo//        " undo files
 
 
 " GUI specific
