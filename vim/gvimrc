@@ -25,17 +25,17 @@ set ignorecase                       " case-insensitive
 set hlsearch                         " highlight matches
 
 
-" VIM directories
+" VIM files and directories
+
 if !isdirectory($HOME . "/.cache/vim")
     call mkdir($HOME . "/.cache/vim/backup", "p", 0700)
     call mkdir($HOME . "/.cache/vim/swap", "p", 0700)
     call mkdir($HOME . "/.cache/vim/undo", "p", 0700)
 endif
 
-
-" VIM files
-" (// creates files using complete file path; preventing name collisions)
+set runtimepath+=$HOME/.config/vim         " config preference
 set viminfo+=n$HOME/.cache/vim/viminfo     " info file
+" (// creates files using complete file path; preventing name collisions)
 set backupdir=$HOME/.cache/vim/backup//    " backup files
 set directory=$HOME/.cache/vim/swap//      " swap files
 set undodir=$HOME/.cache/vim/undo//        " undo files
