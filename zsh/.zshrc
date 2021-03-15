@@ -9,9 +9,10 @@ export DOCKER_CONFIG=$XDG_CONFIG_HOME/docker
 
 
 # Python
-export PYTHONSTARTUP=$XDG_CONFIG_HOME/python/pythonrc
-export PYTHON_EGG_CACHE=$XDG_CACHE_HOME/python/python-eggs
-export PYLINTHOME=$XDG_CONFIG_HOME/python/pylint
+export PYTHONSTARTUP="$XDG_CONFIG_HOME/python/pythonrc"
+export PYLINTHOME="$XDG_CONFIG_HOME/python/pylint"
+export PYTHON_EGG_CACHE="$XDG_CACHE_HOME/python/python-eggs"
+export PYTHONHISTFILE="$XDG_CACHE_HOME/python_history"
 
 
 # IPython/Jupyter
