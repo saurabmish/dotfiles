@@ -54,7 +54,7 @@ export PGSERVICEFILE=$XDG_CONFIG_HOME/postgres/pg_service.conf
 # ZSH
 export CLICOLOR=1
 export TERM=xterm-256color
-export PS1="%{%F{green}%}%n%{%f%}%{%F{white}%}@%{%f%}%{%F{green}%}%m %{%F{red}%}%1~ %{%f%}%% "
+export PS1="%{%F{green}%}%n%{%f%}%{%F{white}%}@%{%f%}%{%F{blue}%}%m %{%F{red}%}%1~ %{%f%}%%"
 export HISTFILE=$XDG_CACHE_HOME/zsh/zsh_history
 
 
