@@ -1,11 +1,18 @@
 # AWS
 export AWS_CLI_FILE_ENCODING=UTF-8
-export AWS_CONFIG_FILE=$XDG_CONFIG_HOME/aws/config
-export AWS_SHARED_CREDENTIALS_FILE=$XDG_CONFIG_HOME/aws/credentials
+export AWS_DEFAULT_REGION="us-east-2"
+export AWS_CONFIG_FILE="$XDG_CONFIG_HOME/aws/config"
+export AWS_SHARED_CREDENTIALS_FILE="$XDG_CONFIG_HOME/aws/credentials"
 
 
 # Docker
-export DOCKER_CONFIG=$XDG_CONFIG_HOME/docker
+export DOCKER_CONFIG="$XDG_CONFIG_HOME/docker"
+export MACHINE_STORAGE_PATH="$XDG_DATA_HOME/docker-machine"
+
+
+# Kubernetes
+export MINIKUBE_HOME="$XDG_CONFIG_HOME/minikube"
+export KUBEHOME="$XDG_CONFIG_HOME/kube"
 
 
 # Python
@@ -25,23 +32,10 @@ export GOPATH=$XDG_CONFIG_HOME/go
 export GO111MODULE=on
 
 
-# Java
-export PATH="/usr/local/opt/openjdk/bin:$PATH"
-export CPPFLAGS="-I/usr/local/opt/openjdk/include"
-
-
 # Rust
 export RUSTUP_HOME=$XDG_CONFIG_HOME/rust/rustup
 export CARGO_HOME=$XDG_CONFIG_HOME/rust/cargo
 export PATH=$XDG_CONFIG_HOME/rust/cargo/bin:$PATH
-
-
-# Ruby
-export PATH="/usr/local/opt/ruby/bin:$PATH"
-export LDFLAGS="-L/usr/local/opt/ruby/lib"
-export CPPFLAGS="-I/usr/local/opt/ruby/include"
-export GEM_HOME=$XDG_CONFIG_HOME/gem
-export GEM_PATH=$XDG_CONFIG_HOME/gem
 
 
 # Postgres
@@ -51,10 +45,19 @@ export PGPASSFILE=$XDG_CONFIG_HOME/postgres/pgpass
 export PGSERVICEFILE=$XDG_CONFIG_HOME/postgres/pg_service.conf
 
 
+# Terraform
+export TF_PLUGIN_CACHE_DIR="$XDG_CACHE_HOME/terraform.d/plugin-cache"
+export TF_CLI_CONFIG_FILE="$XDG_CONFIG_HOME/terraform.d/saurabhqa.tfrc"
+
+
+# VS Code
+export VSCODE_EXTENSIONS="${XDG_DATA_HOME:-~/.local/share}/code-oss/extensions"
+
+
 # ZSH
 export CLICOLOR=1
 export TERM=xterm-256color
-export PS1="%{%F{green}%}%n%{%f%}%{%F{white}%}@%{%f%}%{%F{blue}%}%m %{%F{red}%}%1~ %{%f%}%%"
+export PS1="%{%F{green}%}%n%{%f%}%{%F{white}%}@%{%f%}%{%F{blue}%}%m %{%F{red}%}%1~ %{%f%}%% "
 export HISTFILE=$XDG_CACHE_HOME/zsh/zsh_history
 
 
