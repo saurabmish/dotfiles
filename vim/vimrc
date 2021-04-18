@@ -26,7 +26,6 @@ set hlsearch                         " highlight matches
 
 
 " VIM files and directories
-
 if !isdirectory($HOME . "/.cache/vim")
     call mkdir($HOME . "/.cache/vim/backup", "p", 0700)
     call mkdir($HOME . "/.cache/vim/swap", "p", 0700)
@@ -58,5 +57,3 @@ if has("gui_running")
         set columns=100
     endif
 endif
-
-
