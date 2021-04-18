@@ -48,6 +48,7 @@ if has("gui_running")
     colorscheme zellner              " quite pleasant IMO
     " Adjust font and window dimensions per OS
     if has("gui_gtk2") || has("gui_gtk3")
+        set clipboard=unnamedplus
         set guifont=Inconsolata\ 12
         set lines=47
         set columns=70
